@@ -35,9 +35,7 @@ const router = createBrowserRouter(
       <Route path='contactus' element={<ContactUs />} /> 
       <Route path='user/:userid' element={<User />} /> 
       <Route path='github' element={<Github />} /> 
-      <Route loader={
-        
-      }  path='github' element={<Github />} /> 
+      <Route loader={ githubInfoLoader }  path='github' element={<Github />} /> 
 
     </Route>
   )
