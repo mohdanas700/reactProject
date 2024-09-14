@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { TodoProvider } from './context'
 import './App.css'
-import { TodoForm } from './components'
+import { TodoForm, TodoItem } from './components'
 
 function App() {
   const [todos, setTodos] = useState([])
@@ -51,7 +51,7 @@ function App() {
             {/* Loop and Add TodoItem here */}
             {todos.map((todo) => (
               <div key={todo.id} className="w-full">
-                <TodoForm todo={todo} />
+                <TodoItem todo={todo} />
               </div>
             ))}
           </div>
